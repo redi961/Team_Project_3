@@ -5,10 +5,12 @@ import Menu from './componenent/Menu';
 
 function App() {
     return (
-        <div>         
+        <div>
             <Banner/>
-            <Menu/>               
-            <MapTest/>
+            <div id='ww'>
+                <Menu/>
+                <MapTest/>
+            </div>
         </div>
     );
 }

@@ -1,8 +1,14 @@
+import './Banner.css'
 function Banner() {
     return (
-        <div>                        
-            <h1>Banner</h1>
-        </div>
+        <header id = "Banner">
+            <h1>Brand</h1>
+            <nav>
+                <span>Menu1</span>
+                <span>Menu2</span>
+                <span>Menu3</span>
+            </nav>
+        </header>
     );
-}
+};
 export default Banner;
