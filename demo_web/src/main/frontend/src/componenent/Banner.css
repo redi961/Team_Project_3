@@ -1,0 +1,12 @@
+#Banner {
+  height: 75px;
+  width: 100%;  
+  color: white;
+  background: #76788C;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top:0px;
+}
