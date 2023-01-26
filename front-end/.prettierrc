@@ -1,0 +1,7 @@
+{
+  "singleQuote": true, // 모든걸 ''로 바꿔줌
+  "semi": true, // 세미콜론 붙여줌
+  "tabWidth": 2,
+  "trailingComma": "all", // 끝에 , 자동으로 넣어줌
+  "printWidth": 80
+}
