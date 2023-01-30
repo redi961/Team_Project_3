@@ -35,7 +35,6 @@ app.get("/", (req, res) => {
         ais.posY = tPos[1];
         console.log(ais);
 
-<<<<<<< HEAD
         if(ais.shipType != 0){
           let sql1 = `insert into ship (mmsi, shipName, shipType) values (
             ${ais.mmsi}, '${ais.shipName}', ${ais.shipType});`;
@@ -57,27 +56,6 @@ app.get("/", (req, res) => {
             console.log(sql2);
           });
         }        
-=======
-        let sql1 = `insert into ship (mmsi, shipName, shipType) values (
-          ${ais.mmsi}, '${ais.shipName}', ${ais.shipType});`;
-
-        conn.query(sql1, (err, rows, fields) => {
-          if (err) {
-            console.log("error connecting : " + err.stack);
-          }
-          console.log(sql1);
-        });
-
-        let sql2 = `insert into ais (mmsi, posX, posY, sog, cog) values (
-          ${ais.mmsi}, ${ais.posX}, ${ais.posY}, ${ais.sog}, ${ais.cog});`;
-
-        conn.query(sql2, (err, rows, fields) => {
-          if (err) {
-            console.log("error connecting : " + err.stack);
-          }
-          console.log(sql2);
-        });
->>>>>>> 257240f (ais-decoding-server)
       }
     };
     conn.release();

@@ -7,11 +7,8 @@ const getConnection = (callback) => {
   pool.getConnection((err, conn) => {
     if (!err) {
       callback(conn);
-<<<<<<< HEAD
     } else {
       console.log(err)
-=======
->>>>>>> 257240f (ais-decoding-server)
     }
   });
 };
