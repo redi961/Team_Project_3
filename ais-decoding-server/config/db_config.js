@@ -7,6 +7,8 @@ const getConnection = (callback) => {
   pool.getConnection((err, conn) => {
     if (!err) {
       callback(conn);
+    } else {
+      console.log(err)
     }
   });
 };

@@ -25,7 +25,7 @@ const Filter = () => {
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <Card.Text style={{ padding: '10px' }}>
               <div>ShipType</div>
-              <Form.Check type="checkbox" label="화물선" />
+              <Form.Check type="checkbox" label="화물선"/>
               <Form.Check type="checkbox" label="여객선" />
             </Card.Text>
             <Card.Text style={{ padding: '10px' }}>
