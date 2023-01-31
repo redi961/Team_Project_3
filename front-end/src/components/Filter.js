@@ -10,6 +10,7 @@ const FilterStyle = styled.div `
 `;
 const Filter = (probs) => {
 
+<<<<<<< HEAD
     const [first, setFirst] = useState(false);
     const [second, setSecond] = useState(false);    
 
@@ -69,6 +70,40 @@ const Filter = (probs) => {
             </Card>
         </FilterStyle>
     );
+=======
+const checkBostList = ['화물선', '여객선']
+
+const Filter = () => {
+  return (
+    <FilterStyle>
+      <Card style={{ width: '15rem', backgroundColor: 'rgb(0, 24, 107)'}}>
+        <Card.Body>
+          <Card.Title
+            style={{
+              textAlign: 'center',
+              fontSize: '25px',
+              fontWeight: 'bold',
+            }}
+          >
+            필터
+          </Card.Title>
+          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <Card.Text style={{ padding: '10px' }}>
+              <div>ShipType</div>
+              <Form.Check type="checkbox" label="화물선" />
+              <Form.Check type="checkbox" label="여객선" />
+            </Card.Text>
+            <Card.Text style={{ padding: '10px' }}>
+              <div>Loss signal</div>
+              <Form.Check type="checkbox" label="O" />
+              <Form.Check type="checkbox" label="X" />
+            </Card.Text>
+          </div>
+        </Card.Body>
+      </Card>
+    </FilterStyle>
+  );
+>>>>>>> 179a5b8ef2398b4e73f39c3e6e0bac67ba2cc9fa
 };
 
 export default Filter;
