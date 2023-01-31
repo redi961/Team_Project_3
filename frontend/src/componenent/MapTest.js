@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const {kakao} = window;
 
+
 const MapTest = () => {
 
     const [hello, setHello] = useState('')
@@ -21,11 +22,13 @@ const MapTest = () => {
 
     useEffect(() => {
         const id = setInterval(() => {
-            setx(x + 0.002);
-            sety(y + 0.02);            
-        }, 1000);
+             setx(x + 0.002);
+             sety(y + 0.02);
+             console.log(hello);                         
+        },1000);
         return() => clearInterval(id);
     }, [x, y]);
+    
 
     var imageSrc = 'https://cdn-icons-png.flaticon.com/512/2639/2639441.png', // 마커이미지의 주소입니다
         imageSize = new kakao
@@ -52,12 +55,15 @@ const MapTest = () => {
                 center: new kakao
                     .maps
                     .LatLng(x, y), // 지도의 중심좌표
-                level: 12 // 지도의 확대 레벨
+                level: 12 // 지도의 확대 레벨                
             };
 
         var map = new kakao
             .maps
             .Map(mapContainer, mapOption); // 지도를 생성합니다
+
+   
+            
 
         // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
         var positions = [
