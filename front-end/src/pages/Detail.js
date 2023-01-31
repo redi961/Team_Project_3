@@ -7,10 +7,7 @@ const { kakao } = window;
 
 const KakaoMap = () => {
   const [ships, setShips] = useState([]);
-  const [posx, set_posX] = useState(35.05152);
-  const [posy, set_posY] = useState(129.030667);
-  const [level, setlevel] = useState(7);
-
+  
   /*
   const callShip = () => {
     axios
@@ -40,15 +37,15 @@ const KakaoMap = () => {
     },10000);
     return() => clearInterval(id);
   }, [ships]);
+
   useEffect(() => {
 
     const mapContainer = document.getElementById('map');
     const mapOptions = {
-      center: new kakao.maps.LatLng(posx, posy),
-      level: level,
+      center: new kakao.maps.LatLng(35.05152, 129.030667),
+      level: 6,
     };
     const map = new kakao.maps.Map(mapContainer, mapOptions);  
-
 
     // 마커를 표시할 위치와 mmsi 객체 배열입니다
     let positions = [];
@@ -78,51 +75,16 @@ const KakaoMap = () => {
       var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
       console.log(positions[i])
 
-      if (ships[i].aisKey.ship.shipType == 80) {
-      }else{continue}
+     /* if (ships[i].aisKey.ship.shipType == 80) {
+      }else{continue}*/
 
       // 마커를 생성합니다
       var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
         position: positions[i][0].latlng, // 마커를 표시할 위치
         title: positions[i][0].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image: markerImage, // 마커 이미지
-        clickable: true // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정   
-      });
-
-      // 중심좌표 부드럽게 이동 함수
-      function panTo(x,y) {
-        var moveLatLon = new kakao.maps.LatLng(x, y);
-        map.panTo(moveLatLon);
-      }
-
-      // 클릭시 중심좌표 해당 선함으로 이동
-      kakao.maps.event.addListener(marker, 'click', function() {  
-        this.getPosition()
-        let x = this.getPosition().getLat()
-        let y = this.getPosition().getLng()
-
-        panTo(x, y)
-        set_posX(x)
-        set_posY(y)
-      });
-
-      //랜더링시 지도 확대레벨 고정
-      kakao.maps.event.addListener(map, 'zoom_changed', function() {        
-        var level = map.getLevel();
-        setlevel(level)
-      });
-
-
-      //중심좌표값 변화에 따른 랜더링시 지도 위치 고정
-      kakao.maps.event.addListener(map, 'center_changed', function() {
-        var level = map.getLevel(); 
-        var latlng = map.getCenter(); 
-
-        set_posX(latlng.getLat())
-        set_posY(latlng.getLng())
-        setlevel(level)
-    });
+        image: markerImage, // 마커 이미지    
+      });      
 
     // 마커에 표시할 인포윈도우를 생성합니다
     let vw = "<div class = 'wrap'>" + 

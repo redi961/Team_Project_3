@@ -8,10 +8,12 @@ const FilterStyle = styled.div`
   padding: 20px;
 `;
 
+const checkBostList = ['화물선', '여객선']
+
 const Filter = () => {
   return (
     <FilterStyle>
-      <Card style={{ width: '15rem', backgroundColor: 'rgb(0, 24, 107)' }}>
+      <Card style={{ width: '15rem', backgroundColor: 'rgb(0, 24, 107)'}}>
         <Card.Body>
           <Card.Title
             style={{
@@ -25,7 +27,7 @@ const Filter = () => {
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <Card.Text style={{ padding: '10px' }}>
               <div>ShipType</div>
-              <Form.Check type="checkbox" label="화물선"/>
+              <Form.Check type="checkbox" label="화물선" />
               <Form.Check type="checkbox" label="여객선" />
             </Card.Text>
             <Card.Text style={{ padding: '10px' }}>
