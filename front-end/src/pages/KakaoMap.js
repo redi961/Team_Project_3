@@ -9,18 +9,10 @@ const KakaoMap = () => {
   const [ships, setShips] = useState([]);
   const [posx, set_posX] = useState(35.05152);
   const [posy, set_posY] = useState(129.030667);
-<<<<<<< HEAD
   const [level, setlevel] = useState(7);  
   const [x,setX] = useState(0)
-  const a = 0;
-  const b = 0;
+ 
 
-  
-
-=======
-  const [level, setlevel] = useState(7);
-
->>>>>>> 179a5b8ef2398b4e73f39c3e6e0bac67ba2cc9fa
   /*
   const callShip = () => {
     axios
@@ -86,7 +78,6 @@ const KakaoMap = () => {
 
       // 마커 이미지를 생성합니다
       var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-<<<<<<< HEAD
       
       
       //fillter
@@ -103,12 +94,6 @@ const KakaoMap = () => {
         if(ships[i].aisKey.ship.shipType==0){
         }else{continue}
       }   
-=======
-      console.log(positions[i])
-
-      if (ships[i].aisKey.ship.shipType == 80) {
-      }else{continue}
->>>>>>> 179a5b8ef2398b4e73f39c3e6e0bac67ba2cc9fa
 
       // 마커를 생성합니다
       var marker = new kakao.maps.Marker({
@@ -199,11 +184,7 @@ function makeOutListener(infowindow) {
 
   return (
     <>
-<<<<<<< HEAD
     <Sidebar info={{x,setX,syncShip}}/>
-=======
-    <Sidebar/>
->>>>>>> 179a5b8ef2398b4e73f39c3e6e0bac67ba2cc9fa
       <div
         id="map"
         style={{
