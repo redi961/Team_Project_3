@@ -1,0 +1,4 @@
+.wrap {width: 288px;height: 132px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+    .wrap .name {padding: 2px 0 0 5px; background: #eee; border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold; width : 286px;}
+    .desc {position: relative;margin: 2px 0 0 5px;}
+

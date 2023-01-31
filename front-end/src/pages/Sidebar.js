@@ -15,12 +15,13 @@ const Main = styled.div`
   color: white;
 `;
 
-const Sidebar = () => {
-  return (
+const Sidebar = (probs) => { 
+
+  return ( 
     <Main>
       <Title />
       <Search />
-      <Filter />
+      <Filter info={{probs}}/>
       <Detail />
     </Main>
   );

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 const SearchStyle = styled.div`
   height: 10vh;
-  width: 70%;
+  width: 80%;  
 `;
 
 const Search = () => {
