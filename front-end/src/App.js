@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import KakaoMap from './pages/KakaoMap';
 import styled from 'styled-components';
 import {Route, Routes} from 'react-router-dom'
+
 
 const Main = styled.div
 `
@@ -11,15 +11,18 @@ const Main = styled.div
   flex-direction: row;
 `;
 
+
+
 function App() {
+  
   return (
   <>
+    
     <Main>
       <Routes>
         <Route path = '/' element = {<KakaoMap/>}/>
       </Routes>
-    </Main>
-    
+    </Main> 
   </>
 );
 }
