@@ -13,18 +13,30 @@ const KakaoMap = () => {
     const [x, setX] = useState(0)
     const [y, setY] = useState(0)
 
+    /*
+  const callShip = () => {
+    axios
+    .get('/api/ais')
+    .then((response) => {
+      setShips(response.data);
+    })
+    .catch((error) => console.log(error));
+  }
+*/
     async function syncShip() {
         try {
-            await axios
+            const resp = await axios
                 .get('/api/ais')
                 .then((response) => {
                     setShips(response.data);
+                    return resp
                 })
         } catch (error) {
             console.error(error)
         }
     }
 
+    // 수정 1번
     useEffect(() => {
         const id = setInterval(async () => {
             syncShip();
@@ -44,6 +56,7 @@ const KakaoMap = () => {
             .maps
             .Map(mapContainer, mapOptions);
 
+        // 마커를 표시할 위치와 mmsi 객체 배열입니다
         let positions = [];
         positions = ships.map((ship) => [
             ...positions, {
