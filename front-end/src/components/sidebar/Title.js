@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TitleSTyle = styled.div`
-  height: 25vh;
+  height: 15vh;
   text-align: center;
   font-size: 40px;
-  padding-top: 50px;
+  padding-top: 10px;
 `;
 
 const Title = () => {
