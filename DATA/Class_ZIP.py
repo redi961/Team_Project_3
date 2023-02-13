@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
 from collections import Counter
 from sklearn.metrics import mean_squared_error
+from keras.callbacks import EarlyStopping
 
 ### Import_TF
 import tensorflow as tf
@@ -343,8 +344,7 @@ class Module_2:
             tf.keras.layers.Dense(4, activation='linear')
         ])
 
-        ## compile & learning
-        from keras.callbacks import EarlyStopping
+        ## compile & learning        
         # mae : 오차 절댓값
         model.compile(loss='mse', optimizer = 'adam', metrics=['mae'])
         ea_stop = EarlyStopping(monitor='val_loss', patience=30)
